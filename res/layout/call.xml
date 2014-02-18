@@ -1,0 +1,115 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <!-- 标题栏 -->
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="45sp"
+        android:background="#FF586771"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/tv_call"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#FF000000"
+            android:gravity="center"
+            android:text="@string/tv_call"
+            android:textColor="#FFf4e13c"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tv_sign"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/tv_sign"
+            android:textColor="#FFFFFFFF"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tv_result"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/tv_result"
+            android:textColor="#FFFFFFFF"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <!-- 内容栏 -->
+
+    <RelativeLayout
+             android:background="#FFe8e8e8"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <Button
+            android:id="@+id/btn_add"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_add" />
+
+        <ListView
+            android:id="@+id/lv_people"
+            android:entries="@array/list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/linearLayout2"
+            android:layout_below="@+id/btn_add" >
+        </ListView>
+
+        <!-- 按钮栏 -->
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true" >
+
+            <Button
+                android:id="@+id/btn_submit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/btn_submit" />
+
+            
+            
+          
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1" >
+                
+                  <Button
+                android:id="@+id/btn_call"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+       
+                android:text="@string/btn_call" />
+                  
+                     <Button
+                android:id="@+id/btn_stopCall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+             
+                android:visibility="invisible"
+                android:text="@string/btn_stopCall" />
+                
+            </FrameLayout>
+
+         
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>
